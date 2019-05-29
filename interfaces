@@ -1,0 +1,24 @@
+# ifupdown has been replaced by netplan(5) on this system.  See
+# /etc/netplan for current configuration.
+# To re-enable ifupdown on this system, you can run:
+#    sudo apt install ifupdown
+
+# The loopback network interface
+auth lo
+iface lo inet looback
+
+# The primary network interface
+auth ens33
+iface ens33 inet static
+	address 192.168.126.100
+	netmask 255.255.255.0
+	network 192.168.126.0
+	gateway 192.168.126.1
+
+auth ens34
+iface ens34 inet static
+	address 192.168.13.100
+	netmask 255.255.255.0
+	gateway 192.168.13.2
+
+
